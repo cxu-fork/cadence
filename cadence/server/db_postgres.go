@@ -119,7 +119,7 @@ func postgresPopulate() error {
 			clog.Debug("postgresPopulate", fmt.Sprintf("<%s> is a directory, skipping.", path))
 			return nil
 		}
-		extensions := []string{".mp3", ".flac", ".ogg"}
+		extensions := []string{".mp3", ".flac", ".ogg", ".m4a", ".webm", ".aac"}
 		for _, ext := range extensions {
 			if strings.HasSuffix(path, ext) {
 				file, err := os.Open(path)
